@@ -22,6 +22,7 @@ export default function Home() {
       });
 
       const data = await response.json();
+      console.log(data);
 
       setSummary(data.summary);
     } catch (error) {
@@ -59,7 +60,7 @@ export default function Home() {
               Summary
             </h2>
 
-            <div className="bg-zinc-900 p-5 rounded-lg border border-zinc-700 whitespace-pre-wrap">
+            <div className="p-5 rounded-lg border border-zinc-700 whitespace-pre-wrap">
               {summary}
             </div>
           </div>

@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     }
 
     const response = await openai.chat.completions.create({
-      model: "gpt-4.1-mini",
+      model: "baidu/cobuddy:free",
       messages: [
         {
           role: "system",
@@ -27,10 +27,11 @@ export async function POST(req: Request) {
           content: `Summarize this text:\n\n${text}`,
         },
       ],
-      temperature: 0.5,
+      temperature: 0.3,
     });
 
     const summary = response.choices[0].message.content;
+    console.log(summary);
 
     return NextResponse.json({
       summary,
