@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "AI Text Summarizer",
-  description: "Developed By Adnan Shiragee",
+  description: "Summarize long text instantly using AI",
 };
 
 export default function RootLayout({

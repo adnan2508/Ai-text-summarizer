@@ -8,6 +8,7 @@ export async function POST(req: Request) {
     const { text } = body;
 
     if (!text) {
+        console.error("You didn't provide any text to summarize.");
       return NextResponse.json(
         { error: "Text is required" },
         { status: 400 }
